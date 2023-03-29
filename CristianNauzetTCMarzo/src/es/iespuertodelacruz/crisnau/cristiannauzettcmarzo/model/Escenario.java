@@ -6,7 +6,7 @@ package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model;
 
 /**
  *
- * @author Kaz
+ * @author cristian & nauzet
  */
 public class Escenario {
     
