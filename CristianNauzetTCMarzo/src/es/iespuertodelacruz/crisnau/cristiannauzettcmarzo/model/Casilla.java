@@ -13,6 +13,8 @@ public class Casilla {
     Punto posicion;
     boolean hasBeenShot;
     Barco barco;
+    
+    Escenario escenario;
 
     /**
      * Constructor con 1 parametro
@@ -22,7 +24,7 @@ public class Casilla {
     public Casilla(Punto posicion) {
         this.posicion = posicion;
     }
-
+ 
     /**
      * Constructor con 2 parametros
      *

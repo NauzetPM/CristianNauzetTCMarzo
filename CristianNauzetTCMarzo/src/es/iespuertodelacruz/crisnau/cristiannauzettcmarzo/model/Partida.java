@@ -8,8 +8,6 @@ package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model;
  *
  * @author cristian & nauzet
  */
-public class Escenario {
-    Casilla[][] casillas;
-    int size;
-
+public class Partida {
+    
 }
