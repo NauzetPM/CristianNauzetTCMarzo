@@ -15,6 +15,7 @@ public class CasillaFX extends Button {
 
     Casilla casilla;
 
+    //Getters
     public Casilla getCasilla() {
         return casilla;
     }

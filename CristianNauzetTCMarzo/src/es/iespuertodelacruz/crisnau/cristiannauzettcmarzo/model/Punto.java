@@ -9,24 +9,33 @@ package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model;
  * @author cristian & nauzet
  */
 public class Punto {
+
     double x;
     double y;
 
+    /**
+     * Constructor con dos parametros
+     *
+     * @param x posicion x
+     * @param y posicion y
+     */
     public Punto(double x, double y) {
         this.x = x;
         this.y = y;
-    } 
+    }
 
+    //Getters
     public double getX() {
         return x;
     }
 
-    public void setX(double x) {
-        this.x = x;
-    }
-
     public double getY() {
         return y;
+    }
+
+    //Setters
+    public void setX(double x) {
+        this.x = x;
     }
 
     public void setY(double y) {
@@ -37,5 +46,5 @@ public class Punto {
     public String toString() {
         return "Punto{" + "x=" + x + ", y=" + y + '}';
     }
-    
+
 }

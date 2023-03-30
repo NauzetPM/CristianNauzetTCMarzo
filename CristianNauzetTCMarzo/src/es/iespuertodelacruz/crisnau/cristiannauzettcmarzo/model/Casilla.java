@@ -9,37 +9,52 @@ package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model;
  * @author cristian & nauzet
  */
 public class Casilla {
+
     Punto posicion;
     boolean hasBeenShot;
     Barco barco;
 
+    /**
+     * Constructor con 1 parametro
+     *
+     * @param posicion Clase Punto con la posicion de la casilla
+     */
     public Casilla(Punto posicion) {
         this.posicion = posicion;
     }
 
+    /**
+     * Constructor con 2 parametros
+     *
+     * @param posicion Clase Punto con la posicion de la casilla.
+     * @param barco Clase Barco que se encuentra en la casilla, si es null
+     * significa que no hay ningun barco.
+     */
     public Casilla(Punto posicion, Barco barco) {
         this.posicion = posicion;
         this.barco = barco;
     }
 
+    //Getters
     public Punto getPosicion() {
         return posicion;
     }
 
-    public void setPosicion(Punto posicion) {
-        this.posicion = posicion;
+    public Barco getBarco() {
+        return barco;
     }
 
     public boolean isHasBeenShot() {
         return hasBeenShot;
     }
 
-    public void setHasBeenShot(boolean hasBeenShot) {
-        this.hasBeenShot = hasBeenShot;
+    //Setters
+    public void setPosicion(Punto posicion) {
+        this.posicion = posicion;
     }
 
-    public Barco getBarco() {
-        return barco;
+    public void setHasBeenShot(boolean hasBeenShot) {
+        this.hasBeenShot = hasBeenShot;
     }
 
     public void setBarco(Barco barco) {
@@ -48,9 +63,8 @@ public class Casilla {
 
     @Override
     public String toString() {
-        return "Casilla{" + "posicion=" + posicion + ", hasBeenShot=" +
-                hasBeenShot + ", barco=" + barco + '}';
+        return "Casilla{" + "posicion=" + posicion + ", hasBeenShot="
+                + hasBeenShot + ", barco=" + barco + '}';
     }
-    
-    
+
 }
