@@ -35,10 +35,18 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         grids = new GridPane[]{gpEnemigo,gpJugador};
-    }    
+        for (GridPane grid : grids) {
+            
+        }
+    }
 
     @FXML
     private void reiniciarPartida(ActionEvent event) {
+    }
+
+    @FXML
+    private void disparar(ActionEvent event) {
+        
     }
     
 }

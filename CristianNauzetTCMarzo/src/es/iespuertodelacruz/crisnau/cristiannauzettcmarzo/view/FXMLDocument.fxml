@@ -9,7 +9,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="669.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.controller.FXMLDocumentController">
    <children>
       <GridPane fx:id="gpEnemigo" layoutX="110.0" layoutY="181.0" prefHeight="174.0" prefWidth="245.0">
@@ -26,22 +25,22 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="3" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#disparar" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
          </children>
       </GridPane>
       <GridPane fx:id="gpJugador" layoutX="626.0" layoutY="181.0" prefHeight="174.0" prefWidth="245.0">
