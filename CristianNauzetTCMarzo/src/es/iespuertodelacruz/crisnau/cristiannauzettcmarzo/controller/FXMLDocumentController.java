@@ -16,7 +16,7 @@ import javafx.scene.layout.GridPane;
 
 /**
  *
- * @author Kaz
+ * @author cristian & nauzet
  */
 public class FXMLDocumentController implements Initializable {
     
@@ -30,9 +30,11 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button btnReiniciar;
     
+    GridPane[] grids;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        grids = new GridPane[]{gpEnemigo,gpJugador};
     }    
 
     @FXML

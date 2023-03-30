@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Kaz
+ * @author cristian & nauzet
  */
 public class CristianNauzetTCMarzo extends Application {
     
@@ -23,6 +23,7 @@ public class CristianNauzetTCMarzo extends Application {
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
+        stage.setTitle("Hundir Flota");
         stage.show();
     }
 
