@@ -4,10 +4,49 @@
  */
 package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  *
  * @author cristian & nauzet
  */
 public class Partida {
+
+    Tablero[] tableros;
+    HashMap<String, ArrayList<Punto>> resultadoDisparos;
+    ArrayList<Punto> disparos;
+    int contadorTurnos;
+
+    public Partida() {
+        contadorTurnos = 0;
+        resultadoDisparos = new HashMap<>();
+        disparos = new ArrayList<>();
+        //generar tablero
+    }
+
+    public void turno() {
+        if (contadorTurnos % 2 == 0) {
+            disparar();
+        }else{
+            disparoIA();
+        }
+        contadorTurnos++;
+    }
+
+    public boolean confirmarImpacto(){
+        return false;
+    }
     
+    public String disparar() {
+        return "";
+    }
+
+    public String disparoIA() {
+        return "";
+    }
+    //turnos
+    //intelegencia artificial
 }
+
+// T[0,1] -> A[0,0], A[1,1], T[0,2] -> T[0,3]

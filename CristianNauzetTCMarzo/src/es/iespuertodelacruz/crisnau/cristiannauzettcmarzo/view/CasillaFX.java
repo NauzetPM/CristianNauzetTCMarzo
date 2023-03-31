@@ -14,7 +14,8 @@ import javafx.scene.control.Button;
 public class CasillaFX extends Button {
 
     Casilla casilla;
-
+    public int y;
+    public int x;
     //Getters
     public Casilla getCasilla() {
         return casilla;

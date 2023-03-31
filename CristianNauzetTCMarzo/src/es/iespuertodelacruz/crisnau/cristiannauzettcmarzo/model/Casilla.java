@@ -14,7 +14,7 @@ public class Casilla {
     boolean hasBeenShot;
     Barco barco;
     
-    Escenario escenario;
+    Tablero escenario;
 
     /**
      * Constructor con 1 parametro

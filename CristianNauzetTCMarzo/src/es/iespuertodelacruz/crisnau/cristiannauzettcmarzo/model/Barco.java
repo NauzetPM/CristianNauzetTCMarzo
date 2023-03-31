@@ -9,7 +9,9 @@ package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model;
  * @author cristian & nauzet
  */
 public class Barco {
+    public String nombre;
     private Casilla[] tamanio;
+
     /**
      * Constructor por defecto
      * @param tamanio 
