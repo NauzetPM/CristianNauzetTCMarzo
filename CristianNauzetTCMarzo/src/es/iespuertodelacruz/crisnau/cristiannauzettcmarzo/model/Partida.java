@@ -28,16 +28,30 @@ public class Partida {
     public void turno() {
         if (contadorTurnos % 2 == 0) {
             disparar();
-        }else{
+        } else {
             disparoIA();
         }
         contadorTurnos++;
     }
 
-    public boolean confirmarImpacto(){
-        return false;
+    public boolean confirmarImpactoJugador(Punto punto) {
+
+        if (tableros[0].casillas[(int) punto.getX()][(int) punto.getY()].barco != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    
+
+    public boolean confirmarImpactoIA(Punto punto) {
+
+        if (tableros[1].casillas[(int) punto.getX()][(int) punto.getY()].barco != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public String disparar() {
         return "";
     }
