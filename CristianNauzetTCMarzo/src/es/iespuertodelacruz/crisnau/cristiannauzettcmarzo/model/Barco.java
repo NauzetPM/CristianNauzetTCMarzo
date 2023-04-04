@@ -11,7 +11,8 @@ package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model;
 public class Barco {
     public String nombre;
     private Casilla[] tamanio;
-
+    boolean hundido;
+    boolean tocado;
     /**
      * Constructor por defecto
      * @param tamanio 
@@ -28,7 +29,7 @@ public class Barco {
     public void setTamanio(Casilla[] tamanio) {
         this.tamanio = tamanio;
     }
-
+    
     @Override
     public String toString() {
         return "Barco{" + "tamanio=" + tamanio + '}';
