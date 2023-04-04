@@ -23,6 +23,8 @@ public class Tablero {
         }
         return false;
     }
-    
+    public Casilla getCasilla(int x,int y){
+        return casillas[x][y];
+    }
     
 }
