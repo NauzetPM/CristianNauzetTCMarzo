@@ -42,20 +42,12 @@ public class Partida {
 
     public boolean confirmarImpactoJugador(Punto punto) {
 
-        if (ia.casillas[(int) punto.getX()][(int) punto.getY()].barco != null) {
-            return true;
-        } else {
-            return false;
-        }
+        return ia.casillas[(int) punto.getX()][(int) punto.getY()].barco != null;
     }
 
     public boolean confirmarImpactoIA(Punto punto) {
 
-        if (jugador.casillas[(int) punto.getX()][(int) punto.getY()].barco != null) {
-            return true;
-        } else {
-            return false;
-        }
+        return jugador.casillas[(int) punto.getX()][(int) punto.getY()].barco != null;
     }
 
     public String disparar() {

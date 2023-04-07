@@ -16,6 +16,10 @@ public class Casilla {
     
     Tablero escenario;
 
+    public Casilla(){
+        
+    }
+    
     /**
      * Constructor con 1 parametro
      *
@@ -43,6 +47,9 @@ public class Casilla {
     }
 
     public Barco getBarco() {
+        if(barco == null){
+            return null;
+        }else
         return barco;
     }
 

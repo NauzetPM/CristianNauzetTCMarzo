@@ -13,11 +13,15 @@ public class Barco {
     private Casilla[] tamanio;
     boolean hundido;
     boolean tocado;
+    int contador = 1;
     /**
      * Constructor por defecto
-     * @param tamanio 
+     * @param size 
      */
-    public Barco() {
+    public Barco(int size) {
+        this.nombre = "B" + contador;
+        this.tamanio = new Casilla[size];
+        contador++;
     }
 
     //Getters Y Setters
@@ -32,7 +36,7 @@ public class Barco {
     
     @Override
     public String toString() {
-        return "Barco{" + "tamanio=" + tamanio + '}';
+        return nombre;
     }
     
     
