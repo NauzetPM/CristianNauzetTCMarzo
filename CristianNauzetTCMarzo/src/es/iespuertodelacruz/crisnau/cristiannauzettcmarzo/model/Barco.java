@@ -9,23 +9,26 @@ package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model;
  * @author cristian & nauzet
  */
 public class Barco {
+
     public String nombre;
     private Casilla[] tamanio;
     boolean hundido;
     boolean tocado;
-    int contador = 1;
+    private static int contador = 1;
+
     /**
      * Constructor por defecto
-     * @param size 
+     *
+     * @param size
      */
     public Barco(int size) {
         this.nombre = "B" + contador;
-        this.tamanio = new Casilla[size];
         contador++;
+        this.tamanio = new Casilla[size];
+
     }
 
     //Getters Y Setters
-    
     public Casilla[] getTamanio() {
         return tamanio;
     }
@@ -33,12 +36,10 @@ public class Barco {
     public void setTamanio(Casilla[] tamanio) {
         this.tamanio = tamanio;
     }
-    
+
     @Override
     public String toString() {
         return nombre;
     }
-    
-    
-    
+
 }
