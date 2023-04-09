@@ -5,6 +5,7 @@
 package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.controller;
 
 import es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model.Barco;
+import es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model.Casilla;
 import es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model.Partida;
 import es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model.Punto;
 import es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model.Tablero;
@@ -62,7 +63,7 @@ public class FXMLDocumentController implements Initializable {
     }
 
     private void disableButtons() {
-        gpJugador.setDisable(true);
+        //gpJugador.setDisable(true);
     }
 
     private void crearGrids() {
@@ -81,7 +82,7 @@ public class FXMLDocumentController implements Initializable {
         }
 
     }
-
+    
     public void iniciarPartida() {
         limpiarGrid();
         disableButtons();
@@ -91,8 +92,8 @@ public class FXMLDocumentController implements Initializable {
 
         Tablero tableroJugador = new Tablero();
         game.setJugador(tableroJugador);
-        game.getIa().generarBarcos();
         game.getJugador().generarBarcos();
+        game.getIa().generarBarcos();
     }
 
     public void limpiarGrid() {

@@ -46,6 +46,9 @@ public class Barco {
         this.tocado = tocado;
     }
     
+    public void setContador(int num){
+        this.contador = 0;
+    }
     @Override
     public String toString() {
         return nombre;

@@ -28,7 +28,7 @@ public class Tablero {
 
             }
         }
-        barcos = new ArrayList<Barco>();
+        barcos = new ArrayList<>();
         barcoPosiciones = new HashMap<>();
     }
 
@@ -82,8 +82,12 @@ public class Tablero {
                             posXActual = posX;
                             posYActual = posY + j;
                         }
-                        String posicionActual = posXActual + "," + posYActual;
-                        posicionesGeneradas.put(posicionActual, barco);
+                        if (casillas[posXActual][posYActual].getBarco() != null) {
+                            isAvalible = false;
+                        } else {
+                            String posicionActual = posXActual + "," + posYActual;
+                            posicionesGeneradas.put(posicionActual, barco);
+                        }
                     }
                 }
 
