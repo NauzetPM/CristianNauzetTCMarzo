@@ -28,6 +28,9 @@ public class Partida {
         contadorTurnos = 0;
         resultadoDisparos = new HashMap<>();
         disparos = new ArrayList<>();
+        posicionesCercanas=new ArrayList<>();
+        posicionesAtacadasTocado=new ArrayList<>();
+        tocado=false;
     }
 
     public void turno() {
