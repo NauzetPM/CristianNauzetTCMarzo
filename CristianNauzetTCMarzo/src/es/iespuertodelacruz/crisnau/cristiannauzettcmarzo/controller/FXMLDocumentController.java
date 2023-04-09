@@ -89,7 +89,6 @@ public class FXMLDocumentController implements Initializable {
         game = new Partida();
         Tablero tableroia = new Tablero();
         game.setIa(tableroia);
-
         Tablero tableroJugador = new Tablero();
         game.setJugador(tableroJugador);
         game.getJugador().generarBarcos();
@@ -141,25 +140,24 @@ public class FXMLDocumentController implements Initializable {
         }
         boton.setDisable(true);
         boton.setOpacity(90);
-
         String respuestaIA = game.disparoIA();
-        System.out.println(respuestaIA);
 
-        String[] splitIA = game.getDisparos().get((game.getDisparos().size()) - 1).toString().split(" ");
+        int num=game.getDisparos().size()-1;
+        Punto a=game.getDisparos().get(num);
 
-        Integer xIA = (Integer.parseInt(splitIA[0]) > 0) ? Integer.valueOf(splitIA[0]) : null;
-        Integer yIA = (Integer.parseInt(splitIA[1]) > 0) ? Integer.valueOf(splitIA[1]) : null;
+        Integer xIA = a.getX();
+        Integer yIA = a.getY();
 
         if (respuestaIA.contains("AGUA!")) {
             estadoCasillasJugador(xIA, yIA, "A");
             txaRegistro.appendText("IA: AGUA!\n");
-        } else if ((respuestaIA).endsWith("TOCADO!")) {
+        } else if ((respuestaIA).contains("TOCADO!")) {
             estadoCasillasJugador(xIA, yIA, "T");
             txaRegistro.appendText("IA: TOCADO!\n");
         } else {
             txaRegistro.appendText("IA: TOCADO! y HUNDIDO!\n");
-            xIA = (xIA == null) ? 0 : xIA;
-            yIA = (yIA == null) ? 0 : yIA;
+            /*xIA = (xIA == null) ? 0 : xIA;
+            yIA = (yIA == null) ? 0 : yIA;*/
             Barco barcoHundido = game.getJugador().getCasilla(xIA, yIA).getBarco();
             for (Punto punto : game.getIa().getPosiciones(barcoHundido)) {
                 int xHundido = punto.getX();
