@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -48,5 +49,19 @@ public class FXMLDocumentController implements Initializable {
     private void disparar(ActionEvent event) {
         
     }
-    
+    public void iniciarPartida(){
+        limpiarGrid();
+        
+    }
+    public void limpiarGrid(){
+        for (Node node : gpJugador.getChildren()) {
+            Button boton = (Button) node;
+            boton.setText("  ");
+        }
+        for (Node node : gpEnemigo.getChildren()) {
+            Button boton = (Button) node;
+            boton.setText("  ");
+            boton.setDisable(false);
+        }
+    }
 }
