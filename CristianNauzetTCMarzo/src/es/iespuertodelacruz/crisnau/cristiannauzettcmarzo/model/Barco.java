@@ -25,7 +25,7 @@ public class Barco {
         this.nombre = "B" + contador;
         contador++;
         this.tamanio = new Casilla[size];
-
+        hundido=false;
     }
 
     //Getters Y Setters

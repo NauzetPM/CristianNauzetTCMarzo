@@ -28,7 +28,6 @@ public class Partida {
         contadorTurnos = 0;
         resultadoDisparos = new HashMap<>();
         disparos = new ArrayList<>();
-        //generar tablero
     }
 
     public void turno() {
@@ -189,14 +188,93 @@ public class Partida {
                 posicionesCercanas.clear();
                 verificarCercanos(jugador);
                 tocado = false;
+                jugador.getCasilla(x, y).getBarco().hundido=true;
             }
         }
 
         //System.out.println(posicionesCercanas);
         return respuesta;
     }
+    
     //turnos
     //intelegencia artificial
+
+    @Override
+    public String toString() {
+        return "Partida{" + "ia=" + ia + ", jugador=" + jugador + ", resultadoDisparos=" + resultadoDisparos + ", disparos=" + disparos + ", contadorTurnos=" + contadorTurnos + ", posicionesAtacadasTocado=" + posicionesAtacadasTocado + ", tocado=" + tocado + ", posicionesCercanas=" + posicionesCercanas + ", ultimaPosicionTocada=" + ultimaPosicionTocada + '}';
+    }
+
+    public Tablero getIa() {
+        return ia;
+    }
+
+    public void setIa(Tablero ia) {
+        this.ia = ia;
+    }
+
+    public Tablero getJugador() {
+        return jugador;
+    }
+
+    public void setJugador(Tablero jugador) {
+        this.jugador = jugador;
+    }
+
+    public HashMap<String, ArrayList<Punto>> getResultadoDisparos() {
+        return resultadoDisparos;
+    }
+
+    public void setResultadoDisparos(HashMap<String, ArrayList<Punto>> resultadoDisparos) {
+        this.resultadoDisparos = resultadoDisparos;
+    }
+
+    public ArrayList<Punto> getDisparos() {
+        return disparos;
+    }
+
+    public void setDisparos(ArrayList<Punto> disparos) {
+        this.disparos = disparos;
+    }
+
+    public int getContadorTurnos() {
+        return contadorTurnos;
+    }
+
+    public void setContadorTurnos(int contadorTurnos) {
+        this.contadorTurnos = contadorTurnos;
+    }
+
+    public ArrayList<Punto> getPosicionesAtacadasTocado() {
+        return posicionesAtacadasTocado;
+    }
+
+    public void setPosicionesAtacadasTocado(ArrayList<Punto> posicionesAtacadasTocado) {
+        this.posicionesAtacadasTocado = posicionesAtacadasTocado;
+    }
+
+    public boolean isTocado() {
+        return tocado;
+    }
+
+    public void setTocado(boolean tocado) {
+        this.tocado = tocado;
+    }
+
+    public ArrayList<String> getPosicionesCercanas() {
+        return posicionesCercanas;
+    }
+
+    public void setPosicionesCercanas(ArrayList<String> posicionesCercanas) {
+        this.posicionesCercanas = posicionesCercanas;
+    }
+
+    public Punto getUltimaPosicionTocada() {
+        return ultimaPosicionTocada;
+    }
+
+    public void setUltimaPosicionTocada(Punto ultimaPosicionTocada) {
+        this.ultimaPosicionTocada = ultimaPosicionTocada;
+    }
 }
 
 // T[0,1] -> A[0,0], A[1,1], T[0,2] -> T[0,3]

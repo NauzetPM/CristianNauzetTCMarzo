@@ -24,12 +24,14 @@ public class Punto {
         this.y = y;
     }
 
+
+
     //Getters
     public int getX() {
         return x;
     }
 
-    public double getY() {
+    public int getY() {
         return y;
     }
 

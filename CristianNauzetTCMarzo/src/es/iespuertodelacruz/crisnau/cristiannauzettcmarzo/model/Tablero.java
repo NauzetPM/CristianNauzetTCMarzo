@@ -4,6 +4,7 @@
  */
 package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -16,7 +17,8 @@ public class Tablero {
 
     Casilla[][] casillas;
     public static int size = 4;
-
+    public HashMap<Barco,ArrayList<Punto>> barcoPosiciones;
+    public ArrayList<Barco> barcos;
     public Tablero() {
         casillas = new Casilla[4][4];
         for (int i = 0; i < casillas.length; i++) {
@@ -25,6 +27,8 @@ public class Tablero {
 
             }
         }
+        barcos=new ArrayList<Barco>();
+        barcoPosiciones=new HashMap<>();
     }
 
     public boolean isOcupado(Punto punto) {
@@ -91,6 +95,16 @@ public class Tablero {
             int posX = Integer.parseInt(posiciones[0]);
             int posY = Integer.parseInt(posiciones[1]);
             casillas[posX][posY].setBarco(entry.getValue());
+            ArrayList<Punto> puntos;
+            barcos.add(entry.getValue());
+            if(barcoPosiciones.get(entry.getValue())==null){
+                puntos=new ArrayList<Punto>();
+                puntos.add(new Punto(posX,posY));
+                barcoPosiciones.put(entry.getValue(), puntos);
+            }else{
+                puntos=barcoPosiciones.get(entry.getValue());
+                puntos.add(new Punto(posX,posY));
+            } 
         }
     }
 
@@ -113,4 +127,44 @@ public class Tablero {
         }
         return resultado;
     }
+    public boolean perdiste(){
+        boolean resultado=false;
+        int barcosHundidos=0;
+        for (Barco barco : barcos) {
+            if(barco.hundido){
+                barcosHundidos++;
+            }
+        }
+        if(barcosHundidos==3){
+            resultado=true;
+        }
+        return resultado;
+    } 
+    public ArrayList<Punto> getPosiciones(Barco barco){
+        return barcoPosiciones.get(barco);
+    }
+    public Casilla[][] getCasillas() {
+        return casillas;
+    }
+
+    public void setCasillas(Casilla[][] casillas) {
+        this.casillas = casillas;
+    }
+
+    public static int getSize() {
+        return size;
+    }
+
+    public static void setSize(int size) {
+        Tablero.size = size;
+    }
+
+    public HashMap<Barco, ArrayList<Punto>> getBarcoPosiciones() {
+        return barcoPosiciones;
+    }
+
+    public void setBarcoPosiciones(HashMap<Barco, ArrayList<Punto>> barcoPosiciones) {
+        this.barcoPosiciones = barcoPosiciones;
+    }
+    
 }
