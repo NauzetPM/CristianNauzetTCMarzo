@@ -5,6 +5,7 @@
 package es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.view;
 
 import es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model.Casilla;
+import es.iespuertodelacruz.crisnau.cristiannauzettcmarzo.model.Tablero;
 import javafx.scene.control.Button;
 
 /**
@@ -14,11 +15,11 @@ import javafx.scene.control.Button;
 public class CasillaFX extends Button {
 
     Casilla casilla;
-    public int y;
-    public int x;
+    public Integer y;
+    public Integer x;
+
     //Getters
     public Casilla getCasilla() {
         return casilla;
     }
-
 }

@@ -15,10 +15,11 @@ import java.util.Random;
  */
 public class Tablero {
 
-    Casilla[][] casillas;
+    public Casilla[][] casillas;
     public static int size = 4;
-    public HashMap<Barco,ArrayList<Punto>> barcoPosiciones;
+    public HashMap<Barco, ArrayList<Punto>> barcoPosiciones;
     public ArrayList<Barco> barcos;
+
     public Tablero() {
         casillas = new Casilla[4][4];
         for (int i = 0; i < casillas.length; i++) {
@@ -27,8 +28,8 @@ public class Tablero {
 
             }
         }
-        barcos=new ArrayList<Barco>();
-        barcoPosiciones=new HashMap<>();
+        barcos = new ArrayList<Barco>();
+        barcoPosiciones = new HashMap<>();
     }
 
     public boolean isOcupado(Punto punto) {
@@ -97,14 +98,14 @@ public class Tablero {
             casillas[posX][posY].setBarco(entry.getValue());
             ArrayList<Punto> puntos;
             barcos.add(entry.getValue());
-            if(barcoPosiciones.get(entry.getValue())==null){
-                puntos=new ArrayList<Punto>();
-                puntos.add(new Punto(posX,posY));
+            if (barcoPosiciones.get(entry.getValue()) == null) {
+                puntos = new ArrayList<Punto>();
+                puntos.add(new Punto(posX, posY));
                 barcoPosiciones.put(entry.getValue(), puntos);
-            }else{
-                puntos=barcoPosiciones.get(entry.getValue());
-                puntos.add(new Punto(posX,posY));
-            } 
+            } else {
+                puntos = barcoPosiciones.get(entry.getValue());
+                puntos.add(new Punto(posX, posY));
+            }
         }
     }
 
@@ -127,22 +128,25 @@ public class Tablero {
         }
         return resultado;
     }
-    public boolean perdiste(){
-        boolean resultado=false;
-        int barcosHundidos=0;
+
+    public boolean perdiste() {
+        boolean resultado = false;
+        int barcosHundidos = 0;
         for (Barco barco : barcos) {
-            if(barco.hundido){
+            if (barco.hundido) {
                 barcosHundidos++;
             }
         }
-        if(barcosHundidos==3){
-            resultado=true;
+        if (barcosHundidos == 3) {
+            resultado = true;
         }
         return resultado;
-    } 
-    public ArrayList<Punto> getPosiciones(Barco barco){
+    }
+
+    public ArrayList<Punto> getPosiciones(Barco barco) {
         return barcoPosiciones.get(barco);
     }
+
     public Casilla[][] getCasillas() {
         return casillas;
     }
@@ -166,5 +170,5 @@ public class Tablero {
     public void setBarcoPosiciones(HashMap<Barco, ArrayList<Punto>> barcoPosiciones) {
         this.barcoPosiciones = barcoPosiciones;
     }
-    
+
 }

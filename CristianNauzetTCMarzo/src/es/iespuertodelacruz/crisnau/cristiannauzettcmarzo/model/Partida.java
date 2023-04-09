@@ -188,17 +188,16 @@ public class Partida {
                 posicionesCercanas.clear();
                 verificarCercanos(jugador);
                 tocado = false;
-                jugador.getCasilla(x, y).getBarco().hundido=true;
+                jugador.getCasilla(x, y).getBarco().hundido = true;
             }
         }
 
         //System.out.println(posicionesCercanas);
         return respuesta;
     }
-    
+
     //turnos
     //intelegencia artificial
-
     @Override
     public String toString() {
         return "Partida{" + "ia=" + ia + ", jugador=" + jugador + ", resultadoDisparos=" + resultadoDisparos + ", disparos=" + disparos + ", contadorTurnos=" + contadorTurnos + ", posicionesAtacadasTocado=" + posicionesAtacadasTocado + ", tocado=" + tocado + ", posicionesCercanas=" + posicionesCercanas + ", ultimaPosicionTocada=" + ultimaPosicionTocada + '}';
