@@ -125,7 +125,7 @@ public class FXMLDocumentController implements Initializable {
         } else {
             txaRegistro.appendText("Jugador: " + respuestaJugador + "\n");
             Barco barcoHundido = game.getIa().getCasilla(x, y).getBarco();
-            System.out.println(barcoHundido);
+            boton.setText("H");
 
             for (Punto punto : game.getIa().getPosiciones(barcoHundido)) {
                 int xHundido = punto.getX();

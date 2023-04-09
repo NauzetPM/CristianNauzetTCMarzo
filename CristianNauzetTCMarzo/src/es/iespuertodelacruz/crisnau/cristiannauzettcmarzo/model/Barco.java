@@ -13,7 +13,7 @@ public class Barco {
     public String nombre;
     private Casilla[] tamanio;
     boolean hundido;
-    boolean tocado;
+    int tocado;
     private static int contador = 1;
 
     /**
@@ -26,6 +26,7 @@ public class Barco {
         contador++;
         this.tamanio = new Casilla[size];
         hundido=false;
+        tocado=0;
     }
 
     //Getters Y Setters
@@ -37,6 +38,14 @@ public class Barco {
         this.tamanio = tamanio;
     }
 
+    public int getTocado() {
+        return tocado;
+    }
+
+    public void setTocado(int tocado) {
+        this.tocado = tocado;
+    }
+    
     @Override
     public String toString() {
         return nombre;

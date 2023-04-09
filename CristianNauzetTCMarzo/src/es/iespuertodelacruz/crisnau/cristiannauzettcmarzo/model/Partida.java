@@ -60,12 +60,13 @@ public class Partida {
         if (!tablero.isOcupado(p)) {
             respuesta = "AGUA!";
         } else {
-            if (tablero.getCasilla(x, y).barco.hundido) {
-                respuesta += "HUNDIDO!";
-            } else {
-                respuesta = "TOCADO!";
+            respuesta = "TOCADO!";
+            tablero.getCasilla(x, y).getBarco().setTocado(tablero.getCasilla(x, y).getBarco().getTocado()+1);
+            if(tablero.getCasilla(x, y).getBarco().getTocado()==tablero.getCasilla(x, y).getBarco().getTamanio().length){
+                tablero.getCasilla(x, y).getBarco().hundido=true;
+                respuesta+="Y Hundido!";
             }
-            return respuesta;
+            
         }
 
         return respuesta;
