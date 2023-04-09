@@ -61,7 +61,6 @@ public class FXMLDocumentController implements Initializable {
         iniciarPartida();
     }
 
-
     private void disableButtons() {
         gpJugador.setDisable(true);
     }
@@ -93,7 +92,7 @@ public class FXMLDocumentController implements Initializable {
         Tablero tableroJugador = new Tablero();
         game.setJugador(tableroJugador);
         game.getIa().generarBarcos();
-        game.getJugador().generarBarcos();     
+        game.getJugador().generarBarcos();
     }
 
     public void limpiarGrid() {
@@ -111,9 +110,9 @@ public class FXMLDocumentController implements Initializable {
     //No se enlaza el metodo a hacer click en los botones
     private void seleccionarCasilla(ActionEvent event) {
         Button boton = (Button) event.getSource();
-        int x = (GridPane.getRowIndex(boton) == null) ? 0 : GridPane.getRowIndex(boton);
-        int y = (GridPane.getColumnIndex(boton) == null) ? 0 : GridPane.getColumnIndex(boton);
-
+        CasillaFX casilla = (CasillaFX) boton;
+        int x = casilla.x;
+        int y = casilla.y;
         String respuestaJugador = game.verDisparo(game.getIa(), x, y);
 
         if (respuestaJugador.equals("AGUA!")) {
